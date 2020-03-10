@@ -22,6 +22,12 @@ Run Rabbitmq on docker with management plugin enabled, for more details check do
 docker run -d --hostname rabbit --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 ```
 
+To use any of the rabbitmq console tools like rabbitmqctl inside the docker use:
+
+```bash
+docker exec rabbitmq rabbitmqctl status
+```
+
 ### Install
 
 The following commands install the latest available version of Rabbitmq and Erlang on ubuntu 18.04 bionic, for more details check documentation [here](https://www.rabbitmq.com/install-debian.html#apt-bintray)
@@ -37,6 +43,11 @@ sudo systemctl enable rabbitmq-server
 ```
 
 ### Management
+
+Display information about the RabbitMQ broker
+```bash
+rabbitmqctl status
+```
 
 Enable management plugin
 ```bash
