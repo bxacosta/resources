@@ -115,7 +115,7 @@ Publish a message
 rabbitmqadmin publish exchange=amq.default routing_key=[queue_name] payload="hello, world"
 ```
 
-Publish messages
+Get messages
 ```bash
 rabbitmqadmin get queue=[queue_name] ackmode=ack_requeue_true
 ```
