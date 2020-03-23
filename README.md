@@ -110,12 +110,12 @@ Get a list of queues
 rabbitmqadmin list queues vhost name node messages
 ```
 
-- Publish a message
+Publish a message
 ```bash
 rabbitmqadmin publish exchange=amq.default routing_key=[queue_name] payload="hello, world"
 ```
 
-- Publish messages
+Publish messages
 ```bash
 rabbitmqadmin get queue=[queue_name] ackmode=ack_requeue_true
 ```
