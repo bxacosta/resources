@@ -44,6 +44,8 @@ sudo systemctl enable rabbitmq-server
 
 ### Management
 
+#### rabbitmqctl
+
 Display information about the RabbitMQ broker
 ```bash
 rabbitmqctl status
@@ -100,3 +102,22 @@ rabbitmqctl list_permissions -p [vhost]
 ```
 
 The full list of all available commands can be found [here](https://www.rabbitmq.com/rabbitmqctl.8.html).
+
+#### rabbitmqadmin
+
+Get a list of queues
+```bash
+rabbitmqadmin list queues vhost name node messages
+```
+
+- Publish a message
+```bash
+rabbitmqadmin publish exchange=amq.default routing_key=[queue_name] payload="hello, world"
+```
+
+- Publish messages
+```bash
+rabbitmqadmin get queue=[queue_name] ackmode=ack_requeue_true
+```
+
+Other commands can be found [here](https://www.rabbitmq.com/management-cli.html).
