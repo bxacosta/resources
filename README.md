@@ -121,3 +121,11 @@ rabbitmqadmin get queue=[queue_name] ackmode=ack_requeue_true
 ```
 
 Other commands can be found [here](https://www.rabbitmq.com/management-cli.html).
+
+
+## Heroku
+
+Environment variables
+```bash
+heroku run printenv
+```
