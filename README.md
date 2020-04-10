@@ -101,6 +101,11 @@ List permissions
 rabbitmqctl list_permissions -p [vhost]
 ```
 
+List queues
+```bash
+rabbitmqctl list_queues -p [vhost] name durable messages consumers
+```
+
 The full list of all available commands can be found [here](https://www.rabbitmq.com/rabbitmqctl.8.html).
 
 #### rabbitmqadmin
@@ -125,7 +130,14 @@ Other commands can be found [here](https://www.rabbitmq.com/management-cli.html)
 
 ## Heroku
 
-Environment variables
+Show all environment variables
+```bash
+heroku run printenv
+```
+
+## Openshift
+
+Clean cluster
 ```bash
 heroku run printenv
 ```
