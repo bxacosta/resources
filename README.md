@@ -139,5 +139,5 @@ heroku run printenv
 
 Clean cluster
 ```bash
-heroku run printenv
+oc delete all --all
 ```
